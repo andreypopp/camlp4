@@ -1,0 +1,40 @@
+{
+    "name": "@opam/camlp4",
+    "version": "4.2.7",
+    "opam": {
+        "url": "https://github.com/ocaml/camlp4/archive/4.02+7.tar.gz"
+    },
+    "esy": {
+        "build": [
+            "./configure --bindir=$cur__bin --libdir=$cur__lib --pkgdir=$cur__lib",
+            "make all",
+            "make install install-META",
+            "(opam-installer --prefix=$cur__install || true)"
+        ],
+        "buildsInSource": true,
+        "exportedEnv": {
+            "camlp4_version": {
+                "scope": "global",
+                "val": "4.02.7"
+            },
+            "camlp4_enable": {
+                "scope": "global",
+                "val": "enable"
+            },
+            "camlp4_installed": {
+                "scope": "global",
+                "val": "true"
+            }
+        }
+    },
+    "dependencies": {
+        "substs": "esy-ocaml/substs",
+        "@opam/ocamlfind": "*",
+        "@opam/conf-which": "*",
+        "opam-installer-bin": "esy-ocaml/opam-installer-bin"
+    },
+    "scripts": {},
+    "peerDependencies": {
+        "ocaml": ">= 4.02.0 < 4.03.0"
+    }
+}
