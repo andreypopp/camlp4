@@ -1,4 +1,6 @@
 _build/
+_install/
+node_modules/
 config.sh
 myocamlbuild_config.ml
 camlp4/boot/*.old

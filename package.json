@@ -1,0 +1,38 @@
+{
+    "name": "@opam/camlp4",
+    "version": "4.2.7",
+    "esy": {
+        "build": [
+            "(make clean || true)",
+            "./configure --bindir=$cur__bin --libdir=$cur__lib --pkgdir=$cur__lib",
+            "make all",
+            "make install install-META",
+            "(opam-installer --prefix=$cur__install || true)"
+        ],
+        "exportedEnv": {
+            "camlp4_version": {
+                "scope": "global",
+                "val": "4.02.7"
+            },
+            "camlp4_enable": {
+                "scope": "global",
+                "val": "enable"
+            },
+            "camlp4_installed": {
+                "scope": "global",
+                "val": "true"
+            }
+        }
+    },
+    "dependencies": {
+        "substs": "esy-ocaml-test/substs",
+        "@opam/ocamlfind": "*",
+        "@opam/conf-which": "*",
+        "@opam/ocamlbuild": "*",
+        "opam-installer-bin": "andreypopp/opam-installer-bin"
+    },
+    "scripts": {},
+    "peerDependencies": {
+        "ocaml": ">= 4.02.0 < 4.03.0"
+    }
+}
