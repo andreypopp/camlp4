@@ -1,5 +1,5 @@
 {
-    "name": "@opam/camlp4",
+    "name": "@opam-alpha/camlp4",
     "version": "4.2.7",
     "opam": {
         "url": "https://github.com/ocaml/camlp4/archive/4.02+7.tar.gz"
@@ -29,8 +29,8 @@
     },
     "dependencies": {
         "substs": "esy-ocaml/substs",
-        "@opam/ocamlfind": "*",
-        "@opam/conf-which": "*",
+        "@opam-alpha/ocamlfind": "*",
+        "@opam-alpha/conf-which": "*",
         "opam-installer-bin": "esy-ocaml/opam-installer-bin"
     },
     "scripts": {},
