@@ -6,7 +6,7 @@
     },
     "esy": {
         "build": [
-            "./configure --bindir=$cur__bin --libdir=$cur__lib --pkgdir=$cur__lib",
+            "./configure --bindir=$cur__install/bin --libdir=$cur__install/lib --pkgdir=$cur__install/lib",
             "make all",
             "make install install-META",
             "(opam-installer --prefix=$cur__install || true)"
