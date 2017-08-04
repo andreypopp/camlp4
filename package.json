@@ -23,7 +23,7 @@
       },
       "camlp4_installed": {
         "scope": "global",
-        "val": "true"
+        "val": "enable"
       }
     }
   },
